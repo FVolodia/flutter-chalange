@@ -15,6 +15,12 @@ class MyApp extends StatelessWidget {
 }
 
 class PianoScreen extends StatelessWidget {
+  final AudioCache player = AudioCache();
+
+  void playNote(int notePosition) {
+    player.play('/note$notePosition.wav');
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -63,10 +69,5 @@ class PianoScreen extends StatelessWidget {
         },
       ),
     );
-  }
-
-  void playNote(int notePosition) {
-    final AudioCache player = AudioCache();
-    player.play('/note$notePosition.wav');
   }
 }
