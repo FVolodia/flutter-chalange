@@ -18,21 +18,27 @@ class PianoScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.purple.shade800,
       appBar: AppBar(
         backgroundColor: Colors.purple.shade800,
-        title: Text('Aria Piano'),
+        title: Text(
+          'Aria\'s Piano',
+          style: TextStyle(fontFamily: "Slackey"),
+        ),
       ),
-      body: Column(
-        crossAxisAlignment: CrossAxisAlignment.stretch,
-        children: <Widget>[
-          buildKeyFun(color: Colors.red, noteName: 'Do', notePosition: 1),
-          buildKeyFun(color: Colors.orange, noteName: 'Re', notePosition: 2),
-          buildKeyFun(color: Colors.yellow, noteName: 'Mi', notePosition: 3),
-          buildKeyFun(color: Colors.green, noteName: 'Fa', notePosition: 4),
-          buildKeyFun(color: Colors.teal, noteName: 'Sol', notePosition: 5),
-          buildKeyFun(color: Colors.blue, noteName: 'La', notePosition: 6),
-          buildKeyFun(color: Colors.purple, noteName: 'Si', notePosition: 7),
-        ],
+      body: SafeArea(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: <Widget>[
+            buildKeyFun(color: Colors.red, noteName: 'Do', notePosition: 1),
+            buildKeyFun(color: Colors.orange, noteName: 'Re', notePosition: 2),
+            buildKeyFun(color: Colors.yellow, noteName: 'Mi', notePosition: 3),
+            buildKeyFun(color: Colors.green, noteName: 'Fa', notePosition: 4),
+            buildKeyFun(color: Colors.teal, noteName: 'Sol', notePosition: 5),
+            buildKeyFun(color: Colors.blue, noteName: 'La', notePosition: 6),
+            buildKeyFun(color: Colors.purple, noteName: 'Si', notePosition: 7),
+          ],
+        ),
       ),
     );
   }
