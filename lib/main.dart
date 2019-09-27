@@ -18,7 +18,8 @@ class PianoScreen extends StatelessWidget {
   final AudioCache player = AudioCache();
 
   void playNote(int notePosition) {
-    player.play('/note$notePosition.wav');
+    player.clearCache();
+    player.play('note$notePosition.wav');
   }
 
   @override
